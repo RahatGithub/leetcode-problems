@@ -1,0 +1,1 @@
+"""Submitted format in Leetcode"""

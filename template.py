@@ -6,9 +6,5 @@ Problem Desc:
 
 
 
-
-
-
-
 """Submitted format in Leetcode"""
 # paste the code here

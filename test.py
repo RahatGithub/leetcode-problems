@@ -1,48 +1,31 @@
 """
 Programmer: Rahat Ahmed Chowdhury
-Problem Name: Search Insert Position
-Problem Desc: Find the position of a given value if it is in a given sorted list, if not then find its suitable position to insert
+Problem Name: Single Number
+Problem Desc: Find which number is not repeated in a given list
 """
 
-def BinarySearch(arr, target):  
-                            
-    start, end = 0, len(arr)-1
+def twoSum(nums, target) : 
 
-    while start <= end : 
+    for i in range(len(nums)) : 
 
-        mid = (start + end)//2
+        e = target - nums[i] 
 
-        if arr[mid] == target : return mid 
+        if e in nums[i+1:] : 
 
-        elif arr[mid] < target : 
-            start = mid + 1
+            j = (i+1) + nums[i+1:].index(e)
 
-        elif arr[mid] > target : 
-            end = mid - 1 
-
-    return start     
-
-
-arr = list(map(int, input().split()))
-
-target = int(input())
-
-print(BinarySearch(arr, target))
+            return [i,j]
 
 """Submitted format in Leetcode"""
 # class Solution:
-#     def searchInsert(self, arr: List[int], target: int) -> int:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+#         for i in range(len(nums)) : 
             
-#             start, end = 0, len(arr)-1
-
-#             while start <= end : 
-
-#                 mid = (start + end)//2
-
-#                 if arr[mid] == target : return mid 
-
-#                 elif arr[mid] < target : start = mid + 1
-
-#                 elif arr[mid] > target : end = mid - 1 
-
-#             return start     
+#             e = target - nums[i]
+            
+#             if e in nums[i+1:] :
+                
+#                 j = (i+1) + nums[i+1:].index(e)
+                
+#                 return [i,j]

@@ -1,5 +1,5 @@
 nums = [1, 2, 4, 13, 28, 13]
 
-i = 14
+for x in enumerate(nums) : 
 
-print(nums[i:])
+    print(x)
